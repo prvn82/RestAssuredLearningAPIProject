@@ -41,7 +41,23 @@ public class Basic {
 
         js= new JsonPath(response);
 
-        Assert.assertEquals(js.get("address"),"70 Summer wauulk, USA","Failed !! Address is not updated");
+        Assert.assertEquals(js.get("address"),"70 Summer walk, USA","Failed !! Address is not updated");
+
+
+
+        //Testing testCase on Mock APIs
+
+        JsonPath jp= new JsonPath(Payload.CoursePrice());
+        System.out.println("No of courses "+jp.getInt("courses.size()"));
+
+        System.out.println("Purchases amount " +jp.getInt("dashboard.purchaseAmount"));
+
+        System.out.println("Title for first course "+jp.get("courses[0].title"));
+
+        int size = jp.getInt("courses.size()");
+        for(int i=0;i<size;i++){
+            System.out.println((i+1)+" :"+jp.get("courses["+i+"].title")+" has "+jp.get("courses["+i+"].price")+ " copies");
+        }
 
 
 
