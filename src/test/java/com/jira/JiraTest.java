@@ -1,10 +1,14 @@
 package com.jira;
 
+import com.jira.payloadgenerator.AuthenticationPayloadclass;
+import com.jira.payloadgenerator.createIssue.fields;
+import com.jira.payloadgenerator.createIssue.issuetypepayload;
 import io.restassured.RestAssured;
 import io.restassured.filter.session.SessionFilter;
 import io.restassured.path.json.JsonPath;
 
 import java.io.File;
+import java.util.Locale;
 
 public class JiraTest {
 
@@ -14,12 +18,15 @@ public class JiraTest {
 
         SessionFilter sessionFilter = new SessionFilter();
 
+       AuthenticationPayloadclass auth = new AuthenticationPayloadclass();
+       auth.setUsername("prvn83");
+       auth.setPassword("praVEEn06*");
+
+
+
         //Getting Session ID
         //Saving newly created sessionID in sessionFilter
-        RestAssured.given().header("content-type","application/json").body("{\n" +
-                "\"username\": \"prvn83\",\n" +
-                "\"password\": \"praVEEn06*\"\n" +
-                "}").filter(sessionFilter).when().post("rest/auth/1/session").then().statusCode(200);
+        RestAssured.given().header("content-type","application/json").body(auth).filter(sessionFilter).when().post("rest/auth/1/session").then().log().all().statusCode(200);
 
         // Creating issue
         String res =RestAssured.given().header("content-type","application/json").filter(sessionFilter).
@@ -57,6 +64,21 @@ public class JiraTest {
         RestAssured.given().header("X-Atlassian-Token","no-check").header("content-type","multipart/form-data").filter(sessionFilter).
                 multiPart(new File("/Users/pk736868/IdeaProjects/RestAssuredLearningAPIProject/src/main/resources/Test.txt")).pathParam("key",Issue_id).
                 when().post("/rest/api/2/issue/{key}/attachments").then().log().all().statusCode(200);
+
+
+
+
+        // Get issue details
+        RestAssured.given().header("content-type","application/json").filter(sessionFilter).pathParam("key",Issue_id).queryParam("fields","comment").
+                when().get("/rest/api/2/issue/{key}").then().log().all().statusCode(200);
+
+
+
+
+
+
+
+
 
 
 
