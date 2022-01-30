@@ -1,4 +1,4 @@
-/Users/pk736868/IdeaProjects/RestAssuredLearningAPIProject/src/test/java/Basic.java
+/Users/pk736868/IdeaProjects/RestAssuredLearningAPIProject/src/test/java/makeseleniumeasy/com/JSONSchemaValidator.java
 /Users/pk736868/IdeaProjects/RestAssuredLearningAPIProject/src/test/java/makeseleniumeasy/com/JsonMapper.java
 /Users/pk736868/IdeaProjects/RestAssuredLearningAPIProject/src/test/java/com/jira/payloadgenerator/createIssue/issuetypepayload.java
 /Users/pk736868/IdeaProjects/RestAssuredLearningAPIProject/src/test/java/com/jira/JiraTest.java
@@ -6,7 +6,9 @@
 /Users/pk736868/IdeaProjects/RestAssuredLearningAPIProject/src/test/java/makeseleniumeasy/com/employee.java
 /Users/pk736868/IdeaProjects/RestAssuredLearningAPIProject/src/test/java/com/jira/payloadgenerator/AuthenticationPayloadclass.java
 /Users/pk736868/IdeaProjects/RestAssuredLearningAPIProject/src/test/java/makeseleniumeasy/com/restfulbookerAPI.java
-/Users/pk736868/IdeaProjects/RestAssuredLearningAPIProject/src/test/java/Payload.java
+/Users/pk736868/IdeaProjects/RestAssuredLearningAPIProject/src/test/java/mavenlearning/com/demoTest.java
+/Users/pk736868/IdeaProjects/RestAssuredLearningAPIProject/src/test/java/rahulShettyPackage/com/Payload.java
+/Users/pk736868/IdeaProjects/RestAssuredLearningAPIProject/src/test/java/rahulShettyPackage/com/Basic.java
 /Users/pk736868/IdeaProjects/RestAssuredLearningAPIProject/src/test/java/makeseleniumeasy/com/BuilderchainingClass.java
 /Users/pk736868/IdeaProjects/RestAssuredLearningAPIProject/src/test/java/makeseleniumeasy/com/mainJson.java
 /Users/pk736868/IdeaProjects/RestAssuredLearningAPIProject/src/test/java/makeseleniumeasy/com/contractors.java
@@ -18,3 +20,4 @@
 /Users/pk736868/IdeaProjects/RestAssuredLearningAPIProject/src/test/java/makeseleniumeasy/com/defaultvalueAPI.java
 /Users/pk736868/IdeaProjects/RestAssuredLearningAPIProject/src/test/java/com/jira/payloadgenerator/createIssue/fields.java
 /Users/pk736868/IdeaProjects/RestAssuredLearningAPIProject/src/test/java/makeseleniumeasy/com/GSONClassTest.java
+/Users/pk736868/IdeaProjects/RestAssuredLearningAPIProject/src/test/java/mavenlearning/com/testdemo.java
