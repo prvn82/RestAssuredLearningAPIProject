@@ -26,7 +26,7 @@ public class JiraTest {
 
         //Getting Session ID
         //Saving newly created sessionID in sessionFilter
-        RestAssured.given().header("content-type","application/json").body(auth).filter(sessionFilter).when().post("rest/auth/1/session").then().log().all().statusCode(200);
+        RestAssured.given().header("content-type","application/XML").body(auth).filter(sessionFilter).when().post("rest/auth/1/session").then().log().all().statusCode(200);
 
         // Creating issue
         String res =RestAssured.given().header("content-type","application/json").filter(sessionFilter).
@@ -61,11 +61,9 @@ public class JiraTest {
 
         //Add file to Issue
 
-        RestAssured.given().header("X-Atlassian-Token","no-check").header("content-type","multipart/form-data").filter(sessionFilter).
-                multiPart(new File("/Users/pk736868/IdeaProjects/RestAssuredLearningAPIProject/src/main/resources/Test.txt")).pathParam("key",Issue_id).
-                when().post("/rest/api/2/issue/{key}/attachments").then().log().all().statusCode(200);
-
-
+        issuetypepayload key = RestAssured.given().header("X-Atlassian-Token", "no-check").header("content-type", "multipart/form-data").filter(sessionFilter).
+                multiPart(new File("/Users/pk736868/IdeaProjects/RestAssuredLearningAPIProject/src/main/resources/Test.txt")).pathParam("key", Issue_id).
+                when().post("/rest/api/2/issue/{key}/attachments").then().log().all().statusCode(200).extract().as(issuetypepayload.class);
 
 
         // Get issue details

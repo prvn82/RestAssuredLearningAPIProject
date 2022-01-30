@@ -1,12 +1,9 @@
+package rahulShettyPackage.com;
+
 import io.restassured.RestAssured;
-import io.restassured.internal.ResponseSpecificationImpl;
 import io.restassured.path.json.JsonPath;
-import javafx.beans.binding.When;
-import org.hamcrest.Matcher;
 import org.hamcrest.Matchers;
 import org.testng.Assert;
-
-import java.util.Map;
 
 public class Basic {
 
